@@ -39,8 +39,8 @@ bpmn:
   flows:
     payment-transfer: "PayerFundTransfer-{dfspid}"
     special-payment-transfer: "SpecialPayerFundTransfer-{dfspid}"
-    transaction-request: "PayeeTransactionRequest-{dfspid}"
-    party-registration: "PartyRegistration-{dfspid}"
+    transaction-request: "payee-transaction-request-{dfspid}"
+    party-registration: "party-registration-{dfspid}"
     gsma-base-transaction: "gsma_base_transaction-{dfspid}"
     gsma-int-transfer: "gsma_int_transfer"
     gsma-payee-process: "gsma_payee_process"
@@ -76,6 +76,8 @@ rest:
     header: "Basic Y2xpZW50Og=="
 
 management:
+#  server:
+#    port: 8443
   endpoint:
     health:
       probes:
@@ -84,6 +86,7 @@ management:
         enabled: true
       readiness:
         enabled: true
+#      show-details: always
 logging:
   level:
     root: INFO
@@ -94,7 +97,7 @@ springdoc:
   writer-with-order-by-keys: true
 
 destination:
-    dfspid: "lion"
+    dfspid: "jupiter"
 
 redis:
   host: "127.0.0.1"

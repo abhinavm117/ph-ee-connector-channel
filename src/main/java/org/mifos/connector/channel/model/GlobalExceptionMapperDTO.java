@@ -9,8 +9,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TxnStateResponseDTO {
+public class GlobalExceptionMapperDTO {
 
-    private String transactionId;
-    private String transferState;
+    private String responseCode;
+    private String responseDescription;
 }
