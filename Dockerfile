@@ -1,5 +1,4 @@
-FROM openjdk:17
-EXPOSE 8080
+FROM scratch
 
-COPY build/libs/*.jar ./
-CMD java -jar *.jar
+USER non-root
+RUN echo "hello world"
